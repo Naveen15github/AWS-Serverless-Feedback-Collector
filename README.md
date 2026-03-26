@@ -5,7 +5,7 @@ A serverless CRUD application that collects user feedback via a web form and dis
 ---
 
 ## 🏗️ Architecture
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Gemini_Generated_Image_3k23fe3k23fe3k23.png)
 
 > 📌 Architecture Diagram
 
@@ -28,22 +28,22 @@ A serverless CRUD application that collects user feedback via a web form and dis
 ## 📸 Screenshots
 
 ### Frontend — Submit Feedback Form
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(530).png)
 
 ### Frontend — Feedback Saved Confirmation
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(531).png)
 
 ### Frontend — Admin View with Loaded Entries
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(532).png)
 
 ### AWS Console — DynamoDB Table Items
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(533).png)
 
 ### AWS Console — API Gateway Routes
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(534).png)
 
 ### AWS Console — Lambda Functions
-![Alt Text](image-url)
+![Alt Text](https://github.com/Naveen15github/AWS-Serverless-Feedback-Collector/blob/cd096fe9f7fa9cd7c41cde17c098eb39ecce8104/Screenshot%20(535).png)
 
 ---
 
