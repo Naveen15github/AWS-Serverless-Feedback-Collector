@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feedback</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+  input, textarea { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+  button { background: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; }
+  #msg { margin-top: 10px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h2>Submit Feedback</h2>
+<input id="name" placeholder="Your Name" required>
+<input id="email" placeholder="Email (optional)">
+<textarea id="message" rows="4" placeholder="Your feedback" required></textarea>
+<button onclick="submitFeedback()">Submit</button>
+<div id="msg"></div>
+<hr>
+<h2>Admin ? Recent Feedback</h2>
+<button onclick="loadFeedback()">Load Feedback</button>
+<div id="feedbackList"></div>
+<script>
+const API = 'https://846n061vm1.execute-api.ap-south-1.amazonaws.com/prod';
+async function submitFeedback() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  if (!name || !message) { document.getElementById('msg').innerText = 'Name and message required!'; return; }
+  const res = await fetch(API + '/feedback', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({name, email, message}) });
+  const data = await res.json();
+  document.getElementById('msg').innerText = data.message || data.error;
+}
+async function loadFeedback() {
+  const res = await fetch(API + '/admin/feedback');
+  const items = await res.json();
+  document.getElementById('feedbackList').innerHTML = items.map(i =>
+    `<div style="border:1px solid #ddd;padding:10px;margin:8px 0"><strong>${i.name}</strong> (${i.email || 'no email'})<br>${i.message}<br><small>${i.timestamp}</small></div>`
+  ).join('');
+}
+</script>
+</body>
+</html>
